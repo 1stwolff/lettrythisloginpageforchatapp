@@ -1,0 +1,146 @@
+body{
+  overflow: hidden;
+ background-color: #848871;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ .formContainer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    overflow: hidden;
+     &::before {
+      content: '';
+      position:relative;
+      top: 1px;
+      left: -410px;
+      width: 30px;
+      height: 10000px;
+      background-color: #464b37 ;
+      z-index: -2;
+      // clip-path: polygon(0 1, 100% 0, 70% 100%, 30% 100%);
+      transform: rotate(16deg); /* Adjust the rotation or angle*/
+      // I changed the background to green made this shape be the shadow
+    }
+ 
+ 
+ 
+ 
+     &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      // background-image: url('/Users/administrator/Desktop/lettestthis/src/img/pexels-login-png.jpeg');
+      background-image: url('/Users/administrator/Desktop/lettestthis/src/img/Figma-login.avif');
+      background-size: cover;
+      background-position: center;
+      z-index: -2; /* Move the image pseudo-element behind the trapezoid */
+      clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+      // box-shadow: 10px 0 15px rgba(0, 0, 0, 0.3); /* This should add a shadow to the right but its not because I am using a clip-path to cover part of my image*/
+    }
+ 
+ 
+ 
+ 
+    .formWrapper {
+      // background-color: #848871; No need for background color especially since it bleeds onto my image
+      padding: 20px 90px;
+      margin-right: 100px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      // box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
+       .logo {
+        color: #AFB4AD;
+        font-weight: bold;
+        font-size: 34px;
+       
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+         input {
+          padding: 70px 90px 0px;
+          border: none;
+          border-bottom: 2px solid white;
+          background-color: transparent;
+          font-size: 20px;
+          &::placeholder {
+            color: white;
+            font-weight: bolder;
+            font-size: 20px;
+          }
+          &:focus {
+            outline: none;
+          }
+ 
+ 
+        }
+       
+ 
+ 
+        button {
+          background-color: #262B15;
+          color: white;
+          padding: 17px;
+          font-weight: bold;
+          border-bottom: none;
+          border-radius: 90px;
+          margin-top: 25px;
+          cursor: pointer;
+        }
+        
+      }
+       p {
+        color: rgb(234, 229, 222);
+        font-size: 12px;
+        margin-top: 10px;
+ 
+ 
+            button{
+                background-color: transparent;
+          color: #464B37;
+          padding: 10px;
+          font-weight: bold;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+            }
+      }
+    }
+ 
+ 
+ 
+ 
+//   /* Media query for smaller screens */
+// @media all and (max-width: 1000px) {
+//   .formContainer::before {
+//     position: relative;
+//     top: 1px;
+//     left: -20px; /* Adjust the left position based on your design */
+//     width: 15px; /* Adjust the width based on your design */
+//     height: 10000px;
+//     background-color: #cbfd35;
+//     z-index: -2;
+//     transform: rotate(16deg);
+//   }
+// }
+
+
+  }
+  
+ 
+ 
